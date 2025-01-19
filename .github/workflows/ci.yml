@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests with coverage
+        run: npm test
+
+      - name: Check coverage
+        run: |
+          COVERAGE=$(npx jest --coverage --coverageReporters=text | grep 'All' | awk '{print $4}' | sed 's/%//')
+          if (( $(echo "$COVERAGE < 60" | bc -l) )); then
+            echo "Coverage is below 60% ($COVERAGE%)";
+            exit 1;
+          else
+            echo "Coverage is sufficient ($COVERAGE%)";
+          fi

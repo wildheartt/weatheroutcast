@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1737303427597" clover="3.2.0">
-  <project timestamp="1737303427597" name="All files">
-    <metrics statements="59" coveredstatements="25" conditionals="8" coveredconditionals="4" methods="16" coveredmethods="5" elements="83" coveredelements="34" complexity="0" loc="59" ncloc="59" packages="2" files="3" classes="3"/>
+<coverage generated="1737304256137" clover="3.2.0">
+  <project timestamp="1737304256137" name="All files">
+    <metrics statements="59" coveredstatements="15" conditionals="8" coveredconditionals="4" methods="16" coveredmethods="3" elements="83" coveredelements="22" complexity="0" loc="59" ncloc="59" packages="2" files="3" classes="3"/>
     <package name="components">
-      <metrics statements="42" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="2"/>
+      <metrics statements="42" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
       <file name="Weather.js" path="/Users/wildheartt/projectweather/weatheroutcast/src/components/Weather.js">
-        <metrics statements="42" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="2"/>
+        <metrics statements="42" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
@@ -19,7 +19,7 @@
         <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="36" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
@@ -33,17 +33,17 @@
         <line num="48" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
-        <line num="60" count="3" type="stmt"/>
-        <line num="61" count="3" type="stmt"/>
-        <line num="62" count="3" type="stmt"/>
-        <line num="66" count="3" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
-        <line num="74" count="3" type="stmt"/>
-        <line num="77" count="3" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
         <line num="83" count="1" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
