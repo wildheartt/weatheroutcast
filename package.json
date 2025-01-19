@@ -19,13 +19,14 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "@eslint/js": "^9.18.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "babel-jest": "^29.7.0",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
-    "eslint": "^9.18.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-webpack-plugin": "^4.2.0",
@@ -33,6 +34,7 @@
     "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.4.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.97.1",
@@ -44,8 +46,11 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     },
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-dom/extend-expect"
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "node"
     ]
   }
 }
