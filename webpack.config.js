@@ -1,36 +1,46 @@
-import { resolve } from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ESLintPlugin from 'eslint-webpack-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-export const entry = './src/index.js';
-export const output = {
-  filename: 'bundle.[contenthash].js',
-  path: resolve(__dirname, 'dist'),
-  clean: true,
-};
-export const devServer = {
-  static: './dist',
-  port: 3000,
-  open: true,
-};
-export const plugins = [
-  new HtmlWebpackPlugin({
-    template: './src/index.html',
-  }),
-  new ESLintPlugin(),
-];
-export const module = {
-  rules: [
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
+module.exports = {
+  mode: 'development', // Для dev-режима. На production-сборку переключим позднее.
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.[contenthash].js',
+    publicPath: '', // при необходимости можно настроить
+  },
+  devServer: {
+    port: 3000,
+    open: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
-    },
-    {
-      test: /\.css$/i,
-      use: ['style-loader', 'css-loader'],
-    },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: 'index.html',
+    }),
   ],
 };
