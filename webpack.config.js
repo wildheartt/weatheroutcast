@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // Для dev-режима. На production-сборку переключим позднее.
+  mode: 'development', // xnjnj yflj vtyznnm 
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
-    publicPath: '', // при необходимости можно настроить
+    publicPath: '', 
   },
   devServer: {
     port: 3000,
