@@ -10,6 +10,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    // Ваши правила ESLint (если нужно)
+    // Ваши правила ESLint (если нужно) xnjnj yflj vtyznnm
   },
 };
