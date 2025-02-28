@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // xnjnj yflj vtyznnm 
+  mode: 'development', // xnjnj yflj vtyznnm
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
-    publicPath: '', 
+    publicPath: '',
   },
   devServer: {
     port: 3000,
@@ -39,6 +39,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      use: 'ejs-loader',
       template: './src/index.html',
       filename: 'index.html',
     }),
